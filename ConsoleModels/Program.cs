@@ -26,6 +26,8 @@ namespace ConsoleModels
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+
+            /// Server=DESKTOP-VOAK5LV\\SQLEXPRESS;Database=SimpleModels;User Id=sa; Password=1;
             optionsBuilder.UseSqlServer("Server=DESKTOP-VOAK5LV\\SQLEXPRESS;Database=SimpleModels;User Id=sa; Password=1;");
         }
 
