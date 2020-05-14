@@ -7,14 +7,14 @@ using System.Text;
 
 namespace ConsoleModels.Models.EntityConfigurations
 {
-    class GoodsConfiguration : Microsoft.EntityFrameworkCore.IEntityTypeConfiguration<Goods>
+    class GoodsConfiguration : Microsoft.EntityFrameworkCore.IEntityTypeConfiguration<Good>
     {
-        public void Configure(EntityTypeBuilder<Goods> builder)
+        public void Configure(EntityTypeBuilder<Good> builder)
         {
             //builder.HasBaseType<ReferenceBase<Goods>>();
             builder.HasMany(g => g.Consist).WithOne(r => r.Good).OnDelete(DeleteBehavior.Cascade).HasForeignKey(r=>r.GoodID);
 
-            BaseReferensConfigurator.ConfigureBaseProperties<Goods>(ref builder);
+            BaseReferensConfigurator.ConfigureBaseProperties<Good>(ref builder);
             builder.Property(g => g.Code).HasMaxLength(15);
             builder.Property(g => g.GoodsType).IsRequired().HasDefaultValue(GoodsType.Good);
             builder.Property(g => g.Name).HasMaxLength(150);

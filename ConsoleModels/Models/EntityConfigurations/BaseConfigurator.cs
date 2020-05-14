@@ -9,9 +9,9 @@ namespace ConsoleModels.Models
         public static void ConfigureBaseProperties<T>(ref EntityTypeBuilder<T> builder) where T : class, IBase 
         {
             builder.HasIndex(s => s.LicenseID);
-            builder.Property("LicenseID").IsRequired();
+            builder.Property(s => s.LicenseID).IsRequired();
             /// для вызова ошибки при паралельном редактировании елемента https://metanit.com/sharp/entityframeworkcore/2.11.php
-            builder.Property("Timestamp").IsRowVersion();
+            builder.Property(s => s.Timestamp).IsRowVersion();
         }
 
 

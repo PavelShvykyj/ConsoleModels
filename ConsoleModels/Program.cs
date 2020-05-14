@@ -15,7 +15,7 @@ namespace ConsoleModels
         public DbSet<Storeges> Storeges { get; set; }
         public DbSet<Contragents> Contragents { get; set; }
         public DbSet<RcordOfGoodConsist> RcordOfGoodConsist { get; set; }
-        public DbSet<Goods> Goods { get; set; }
+        public DbSet<Good> Goods { get; set; }
         ////// Docs
 
 

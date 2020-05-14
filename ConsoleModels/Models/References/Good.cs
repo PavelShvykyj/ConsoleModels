@@ -27,7 +27,7 @@ namespace ConsoleModels.Models
     public class RcordOfGoodConsist 
     {
         public Guid GoodID { get; set; }
-        public virtual Goods Good { get; set; }
+        public virtual Good Good { get; set; }
         public byte Id { get; set; }
         public Units Unit { get; set; }
         public int Brutto { get; set; }
@@ -35,7 +35,7 @@ namespace ConsoleModels.Models
         public string Description { get; set; }
     }
 
-    public class Goods : BaseReference<Goods>
+    public class Good : BaseReference<Good>
     {
         public GoodsType GoodsType { get; set; }
         public Units UnitOfSale { get; set; }

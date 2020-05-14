@@ -17,7 +17,7 @@ namespace ConsoleModels.Models.Docs
     public class PurchasRecordsGoods 
     {
         public int PurchasId { get; set; }
-        public Goods Good { get; set; }
+        public Good Good { get; set; }
         public Storeges Storege { get; set; }
         public Units Unit { get; set; }
         public int Quantity { get; set; }

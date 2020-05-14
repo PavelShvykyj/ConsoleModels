@@ -12,7 +12,7 @@ namespace ConsoleModels.Models.References
         public Boolean IsFolder { get; set; }
         public Boolean IsDeleted { get; set; }
         public Boolean IsPredefined { get; set; }
-        public Guid ParentID { get; set; }
+        public Guid? ParentID { get; set; }
         public virtual T Parent { get => Parent; set { Parent = value; } }
         public virtual IEnumerable<T> Children { get { return Children; } set { Children = value; } }
 
@@ -27,7 +27,7 @@ namespace ConsoleModels.Models.References
         public Boolean IsFolder { get; set; }
         public Boolean IsDeleted { get; set; }
         public Boolean IsPredefined { get; set; }
-        public Guid ParentID { get; set; }
+        public Guid? ParentID { get; set; }
         
         public virtual T Parent { get; set; }
         public virtual IEnumerable<T> Children  { get; set; }

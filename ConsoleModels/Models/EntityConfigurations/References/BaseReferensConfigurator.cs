@@ -26,12 +26,14 @@ namespace ConsoleModels.Models.EntityConfigurations
             builder.HasIndex(s => s.Name);
             builder.HasIndex(s => s.ParentID);
 
-            builder.Property("Code").IsRequired();
-            builder.Property("IsDeleted").IsRequired().HasDefaultValue(false);
-            builder.Property("IsFolder").IsRequired();
-            builder.Property("IsPredefined").IsRequired().HasDefaultValue(false);
-            builder.Property("Name").IsRequired();
+            builder.Property(s => s.Code).IsRequired();
+            builder.Property(s => s.IsDeleted).IsRequired().HasDefaultValue(false);
+            builder.Property(s => s.IsFolder).IsRequired();
+            builder.Property(s => s.IsPredefined).IsRequired().HasDefaultValue(false);
+            builder.Property(s => s.Name).IsRequired();
+
             
+
         }
 
     }

@@ -12,9 +12,9 @@ namespace ConsoleModels.Models.EntityConfigurations
             builder.HasIndex(r => r.GoodID);
             builder.HasOne(r => r.Good).WithMany(g => g.Consist).HasForeignKey(r => r.GoodID);
             
-            builder.Property("Brutto").IsRequired().HasDefaultValue(0);
-            builder.Property("Netto").HasDefaultValue(0);
-            builder.Property("Unit").IsRequired().HasDefaultValue(Units.piece); // piece 
+            builder.Property(s=>s.Brutto).IsRequired().HasDefaultValue(0);
+            builder.Property(s => s.Netto).HasDefaultValue(0);
+            builder.Property(s => s.Unit).IsRequired().HasDefaultValue(Units.piece); // piece 
         }
     }
 }
